@@ -1,5 +1,8 @@
 # README
 
+This is part of the odin project ruby on rails learning path in this lesson I'll be learning about
+making forms with html and using rails helper functions to speed up the process
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
