@@ -1,20 +1,35 @@
-<%= form_with model: User.edit do |form| %>
+<%= form_with model: @user do |form| %>
+
+<% if @user.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+    <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+
 <div>
   <%= form.label :username %>
-  <%= form.text_field :username, placeholder: "Choose a cool and wacky name" %>
+  <%= form.text_field :username%>
 </div>
 
 <div>
   <%= form.label :password %>
-  <%= form.text_field :password, placeholder: "Make is super secret" %>
+  <%= form.text_field :password%>
 </div>
 
 <div>
   <%= form.label :email %>
-  <%= form.text_field :email, placeholder: "johndoe@gmail.com" %>
+  <%= form.text_field :email %>
 </div>
 
 <div>
-  <%= form.submit %>
+  <%= form.submit 'Update Resource' %>
 </div>
+
+
 <% end %>
