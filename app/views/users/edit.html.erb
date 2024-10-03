@@ -1,0 +1,20 @@
+<%= form_with model: User.edit do |form| %>
+<div>
+  <%= form.label :username %>
+  <%= form.text_field :username, placeholder: "Choose a cool and wacky name" %>
+</div>
+
+<div>
+  <%= form.label :password %>
+  <%= form.text_field :password, placeholder: "Make is super secret" %>
+</div>
+
+<div>
+  <%= form.label :email %>
+  <%= form.text_field :email, placeholder: "johndoe@gmail.com" %>
+</div>
+
+<div>
+  <%= form.submit %>
+</div>
+<% end %>
